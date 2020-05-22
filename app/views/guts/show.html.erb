@@ -1,0 +1,12 @@
+<p>
+  <strong>Name</strong>
+  <%= @gut.name %>
+</p>
+
+<p>
+  <strong>Description</strong>
+  <%= @gut.description %>
+</p>
+
+<%= link_to 'Back', guts_path %>
+| <%= link_to 'Edit', edit_gut_path(@gut) %>

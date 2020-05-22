@@ -1,0 +1,22 @@
+<h2>New Gut</h2>
+
+<div>
+  <%= link_to 'New Gut', new_gut_path %>
+</div>
+
+<h2>Gut list</h2>
+
+<div>
+  <% @guts.each do |gut| %>
+    <div>
+      <span><%= gut.name %></span>
+      <span> / </span>
+      <span><%= gut.description %></span>
+      <span> / </span>
+      <span><%= link_to 'Show', gut_path(gut) %></span>
+      <span><%= link_to 'Edit', edit_gut_path(gut) %></span>
+      <span><%= link_to 'Destroy', gut_path(gut), method: :delete, data: { confirm: 'Are you sure?' } %></span>
+    </div>
+  <% end %>
+</div>
+

@@ -1,0 +1,27 @@
+<%= form_with model: @gut, local: true do |form| %>
+  <% if @gut.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gut.errors.count, "error") %> prohibited this string from being saved:</h2>
+      <ul>
+        <% @gut.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+
+  <p>
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+
